@@ -1,0 +1,258 @@
+@import './base.css';
+
+#app {
+ 
+  margin: 0 auto;
+  padding: 0rem;
+
+  width:100%;
+  font-weight: normal;
+}
+
+@media (min-width: 1024px) {
+  body {
+    place-items: center;
+  }
+
+}
+
+html {
+
+
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  box-sizing: border-box;
+
+  margin: 0;
+
+  background-color: #e5e0d4;
+}
+#header {
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/1249884/pexels-photo-1249884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  margin: 0px auto;
+  display: block;
+}
+
+#mapColumn {
+  float: left;
+  width: 70%;
+}
+#infoColumn {
+  padding: 1em;
+  float: left;
+  width: 30%;
+}
+#hoverImage {
+  padding-top: 50vh;
+  padding-left: 10%;
+  align-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  margin: 0 auto;
+  width: 40vw;
+}
+
+#inputRating {
+  padding-top: 1em;
+}
+
+#mapd {
+
+  padding: 2em;
+}
+
+#cardsend {
+
+  padding-bottom: 2em;
+}
+
+.v-textarea .v-field__input {
+  min-width: 500px;
+}
+
+#inputName {
+  max-height: 50px;
+}
+
+
+.v-field__input {
+  width: 460px;
+}
+
+.text-h5 {
+ padding: 1em;
+}
+
+#inputType {
+
+  margin: auto;
+  min-width: 500px;
+}
+#addEntry {
+  position: center;
+  align-self: center;
+  z-index: 1000;
+  margin-top: -15vh;
+ 
+
+}
+
+
+
+h1 {
+  text-align: left;
+  font-size: 50px;
+  font-family: "Work Sans";
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#startButton {
+  color: white;
+  width: 150px;
+  font-family: "Work Sans";
+  font-weight: 600;
+}
+
+#button{
+  font-family: "Work Sans";
+}
+#hinweise {
+  padding-top: 2em;
+  padding-bottom: 6em;
+  height: auto;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: inline-grid;
+  gap: 50px 100px;
+  text-align: left;
+}
+#column1{
+padding-right:5em;}
+
+#ü1 {
+  text-align: center;
+  padding-top:3em;
+  font-size:40px;
+}
+h2 {
+  color: #262520;
+  font-family: "Work Sans";
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h4{
+  font-family:"Work Sans";
+  font-size: 20px;
+  font-weight:600;
+  padding-top: 2em;
+  color:#262520;
+}
+p {
+  font-family: "Work Sans";
+  color: #262520;
+
+  font-size: 18px;
+  padding: 0.2em;
+}
+
+#infoEntry {
+  padding-top: 10px;
+  float: left;
+  flex-direction: column;
+  width: 100%;
+}
+
+#FungiDescription {
+  float: both;
+  padding-top: 10px;
+  margin-top: 20px;
+  
+}
+
+#descriptionCard {
+  padding: 25px;
+  
+}
+
+img{
+  padding-bottom:2em;
+  border-radius: 2%;
+}
+
+
+strong {
+  font-weight: 500;
+
+}
+
+#fonter {
+
+  font-family: "Work Sans";
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+.name {
+  font-family: "Work Sans";
+  color: #262520;
+  font-size: 20px;
+  padding-bottom: 1em;
+  font-weight: 200;
+
+}
+
+#pinInfo{
+
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+#info1{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-start: 1;
+}
+
+#info2{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-start: 1;
+}
+#info3{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-start: 1;
+}
+#info4{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-start: 2;
+}
+#info5{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-start: 2;
+}

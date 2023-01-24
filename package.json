@@ -1,0 +1,39 @@
+{
+  "name": "package.jason",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.79",
+    "axios": "^1.2.2",
+    "cors": "^2.8.5",
+    "esri-leaflet": "^3.0.10",
+    "esri-leaflet-geocoder": "^3.1.3",
+    "express": "^4.18.2",
+    "leaflet": "^1.9.3",
+    "uuid": "^9.0.0",
+    "vue": "^3.2.45",
+    "vuetify": "^3.0.1"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.1.96",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "vite": "^3.2.4"
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sim0Nice/simple-vue-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sim0Nice/simple-vue-app/issues"
+  },
+  "homepage": "https://github.com/Sim0Nice/simple-vue-app#readme"
+}
