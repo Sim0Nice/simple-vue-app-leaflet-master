@@ -27,7 +27,7 @@
 import FungiDescription from "./FungiDescription.vue";
 
 export default {
-  name: "ListEntries",
+  name: "InfoEntry",
   props: ["entry", "index"],
   data: function () {
     return {

@@ -77,7 +77,7 @@ export default {
       lng: 0,
       description: "",
       type: "",
-      rating: [0],
+      rating: 0,
       dialog: false,
     };
   },
@@ -97,7 +97,7 @@ export default {
           (this.lng = 0),
           (this.description = ""),
           (this.type = ""),
-          (this.rating = []);
+          (this.rating = 0);
         this.dialog = false;
       }
     },

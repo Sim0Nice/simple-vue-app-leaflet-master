@@ -1,3 +1,7 @@
+
+
+// Codequelle: Prof-Rating-App-Aufgabe 
+
 const express = require("express");
 const app = express();
 const fs = require("fs");
@@ -7,8 +11,8 @@ const filename = __dirname + "/area.json";
 const { v4: uuidv4 } = require("uuid");
 
 //Middleware
-app.use(express.json()); //for parsing application/json
-app.use(cors()); //for configuring Cross-Origin Resource Sharing (CORS)
+app.use(express.json()); 
+app.use(cors()); 
 function log(req, res, next) {
   console.log(req.method + " Request at" + req.url);
   next();
@@ -16,7 +20,7 @@ function log(req, res, next) {
 app.use(log);
 
 //Endpoints
-app.get("/profs", function (req, res) {
+app.get("/entries", function (req, res) {
   fs.readFile(filename, "utf8", function (err, data) {
     res.writeHead(200, {
       "Content-Type": "application/json",
@@ -25,7 +29,7 @@ app.get("/profs", function (req, res) {
   });
 });
 
-app.get("/profs/:id", function (req, res) {
+app.get("/entries/:id", function (req, res) {
   fs.readFile(filename, "utf8", function (err, data) {
     const dataAsObject = JSON.parse(data)[req.params.id];
     res.writeHead(200, {
@@ -35,36 +39,8 @@ app.get("/profs/:id", function (req, res) {
   });
 });
 
-app.put("/profs/:id", function (req, res) {
-  fs.readFile(filename, "utf8", function (err, data) {
-    let dataAsObject = JSON.parse(data);
-    dataAsObject[req.params.id].name = req.body.name;
-    dataAsObject[req.params.id].description = req.body.description;
-    dataAsObject[req.params.id].type = req.body.type;
-    dataAsObject[req.params.id].rating = req.body.rating;
-    fs.writeFile(filename, JSON.stringify(dataAsObject), () => {
-      res.writeHead(200, {
-        "Content-Type": "application/json",
-      });
-      res.end(JSON.stringify(dataAsObject));
-    });
-  });
-});
 
-app.delete("/profs/:id", function (req, res) {
-  fs.readFile(filename, "utf8", function (err, data) {
-    let dataAsObject = JSON.parse(data);
-    dataAsObject.splice(req.params.id, 1);
-    fs.writeFile(filename, JSON.stringify(dataAsObject), () => {
-      res.writeHead(200, {
-        "Content-Type": "application/json",
-      });
-      res.end(JSON.stringify(dataAsObject));
-    });
-  });
-});
-
-app.post("/profs", function (req, res) {
+app.post("/entries", function (req, res) {
   fs.readFile(filename, "utf8", function (err, data) {
     let dataAsObject = JSON.parse(data);
     dataAsObject.push({

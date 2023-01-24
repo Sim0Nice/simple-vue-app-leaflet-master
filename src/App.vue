@@ -68,12 +68,12 @@
     </div>
 
     <div v-if="currentPin !== null">
-      <ListEntries
+      <InfoEntry
         id="infoEntry"
         :entry="currentPin"
         @entryEdited="editEntry"
         @entryRemoved="removeEntry"
-      ></ListEntries>
+      ></InfoEntry>
     </div>
   </div>
 
@@ -104,7 +104,7 @@
 
 <script>
 import AddEntry from "./components/AddEntry.vue";
-import ListEntries from "./components/ListEntries.vue";
+import InfoEntry from "./components/InfoEntry.vue";
 import axios from "axios";
 import Map from "@/components/Map.vue";
 
@@ -116,7 +116,7 @@ export default {
     Map,
     // MglPopup,
     AddEntry,
-    ListEntries,
+    InfoEntry,
   },
   data: function () {
     return {
@@ -143,7 +143,7 @@ export default {
 
     addEntry: function (e) {
       axios
-        .post("http://" + window.location.hostname + ":8080/profs/", {
+        .post("http://" + window.location.hostname + ":8080/entries/", {
           name: e.name,
           lat: this.lat,
           lng: this.lng,
@@ -160,27 +160,11 @@ export default {
     onMapClick: function (e) {
       (this.lat = e.lat), (this.lng = e.lng);
     },
-
-    editEntry: function (e) {
-      axios
-        .put("http://" + window.location.hostname + ":8080/profs/" + e.index, {
-          rating: e.rating,
-        })
-        .then((response) => {
-          this.listOfEntries = response.data; //TODO: change this, do not return full list
-        });
-    },
-    removeEntry: function (e) {
-      axios
-        .delete("http://" + window.location.hostname + ":8080/profs/" + e.index)
-        .then((response) => {
-          this.listOfEntries = response.data;
-        });
-    },
   },
+  
   async mounted() {
     await axios
-      .get("http://" + window.location.hostname + ":8080/profs/")
+      .get("http://" + window.location.hostname + ":8080/entries/")
       .then((response) => {
         this.listOfEntries = response.data;
       });
