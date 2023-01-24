@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 #mapStyle {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
 }
 </style>
